@@ -7,8 +7,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
+
 /**
  * Teste des événements simples, sans répétition
  */
@@ -37,6 +37,24 @@ public class SimpleEventTest {
     public void eventIsInItsStartDay() {
         assertTrue(simple.isInDay(nov_1_2020), "Un événement a lieu dans son jour de début");
         assertTrue(overlapping.isInDay(nov_1_2020), "Un événement a lieu dans son jour de début");
+    }
+
+    @Test
+    public void verifTitle() {
+        assertEquals("Overlapping event", overlapping.getTitle(),
+                " le nom ne correspond pas");
+    }
+
+    @Test
+    public void verifDuration() {
+        assertEquals(min_120 , overlapping.getDuration(),
+                " la duree ne correspond pas");
+    }
+
+    @Test
+    public void verifStart() {
+        assertEquals(nov_1_2020_22_30 , overlapping.getStart(),
+                " la date de debut ne correspond pas");
     }
 
     @Test

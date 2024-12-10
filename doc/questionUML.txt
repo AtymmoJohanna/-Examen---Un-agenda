@@ -1,2 +1,10 @@
 Ecrire ici votre réponse à la question UML.
 
+La différence principale entre ces deux diagrammes est le fait que l'autre ingénieur a utilisé l'héritage et non la composition.
+
+Avec sa méthode une fois q'un evennement a été crée avec un nombre de repetion limité, il n'est plus possible de changer afin que celui ci se repete indéfiniment. Avec la methode de l'ingénieur il faudrait creer un nouvel evennement or avec celle de base il faut juste affecter la valeur nulle à l'attribut de type terminaison de notre objet event
+
+Bien que celui fait par l'autre ingénieur soit beaucoup plus clair et lisible, il est beaucoup moins flexible que celui de base. Dans le cas où on voudrait créer un nouveau type d'evennement, il faudrait creer de nouvelles classes filles qui hériteront des classes mères présentes
+
+De plus le fait qu'on ai utilisé la composition permet la réutilisation des classes repetition, terminaison... dans d'autre situations/contextes
+

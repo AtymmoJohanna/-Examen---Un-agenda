@@ -97,7 +97,7 @@ public class FixedTerminationEventTest {
         assertFalse(fixedTermination.isInDay(nov_1_2020.plusWeeks(2)),
             "Cet événement ne se produit pas à W+2");
         assertTrue(fixedTermination.isInDay(nov_1_2020.plusWeeks(3)),
-            "Cet événement se produit toutes les semaines");
+           "Cet événement se produit toutes les semaines");
         assertFalse(fixedTermination.isInDay(nov_1_2020.plusWeeks(4)),
             "Cet événement ne se produit pas à W+4");
     }

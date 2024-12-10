@@ -21,8 +21,17 @@ public class Repetition {
      */
     private final ChronoUnit myFrequency;
 
+    private Termination termination;
+
+    private ArrayList<LocalDate> dateException;
+
     public Repetition(ChronoUnit myFrequency) {
         this.myFrequency = myFrequency;
+        this.dateException = new ArrayList<>();
+    }
+
+    public ArrayList<LocalDate> getDateException() {
+        return dateException;
     }
 
     /**
@@ -31,7 +40,8 @@ public class Repetition {
      */
     public void addException(LocalDate date) {
         // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        //throw new UnsupportedOperationException("Pas encore implémenté");
+        dateException.add(date);
     }
 
     /**
@@ -40,7 +50,11 @@ public class Repetition {
      */
     public void setTermination(Termination termination) {
         // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        //throw new UnsupportedOperationException("Pas encore implémenté");
+        this.termination = termination;
+    }
 
+    public Termination getTermination() {
+        return termination;
     }
 }
